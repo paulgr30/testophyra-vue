@@ -1,10 +1,10 @@
 <template>
   <div>
-    <b-card no-body class="mb-3 pt-3 pb-1 px-4 elevation-0">
+    <b-card no-body class="mx-3 mb-3 pt-3 pb-1 px-4">
       <b-row>
         <b-col>
           <!-- Titulo -->
-          <h5>
+          <h5 class="text-left">
             <i class="nav-icon fas fa-file-alt mr-1"></i>
             Acerca del Proyecto
           </h5>
@@ -12,9 +12,9 @@
       </b-row>
     </b-card>
 
-    <b-row>
-      <b-col>
-        <b-card class="elevation-0">
+    <b-row class="mx-1">
+      <b-col md="6">
+        <b-card class="text-left">
               <div class="info">
                 <a href="https://www.facebook.com/paulgarcia27" class="d-block fs-2 text-dark">Paul Garcia Rojas</a>
                 <div class="fs-5">Analista Programador</div>
@@ -40,19 +40,20 @@
         </b-card>
       </b-col>
 
-      <b-col>
-        <b-card class="elevation-0">
+      <b-col md="6">
+        <b-card class="text-left">
           <div class="info">
                 <a href="https://www.facebook.com/paulgarcia27" class="d-block fs-2 text-dark">
-                  Proyecto Start-Basic
+                  Prueba Tecnica - Empresa Ophyra Software
                 </a>
                 <div class="fs-5">Laravel / Vue</div>
               </div>
           <p></p>
-          <p>Proyecto de Login y crud de usuarios, mediante Api Rest, usando la
-          plantilla AdminLte 3.1 y manejo de roles y permisos con spatie y
-          autenticacion JWT. en el que se aplicaron las siguientes
-          tecnologias:
+          <p> Test para evaluar el conocimiento. Crear un proyecto y subirlo a un servidor personal,
+            en el que se puedan crear, eliminar, actualizar y visualizar listado de Item 
+            (De la elección del programador). Dichos Items deben incluir una imagen,
+            precio, descripción y Título y deben poder visualizarse en una tabla con paginación
+            (5 resultados por página). Este test lo realice usando las siguientes tecnologias:
           </p>
           <ul>
             <li>
@@ -64,7 +65,7 @@
           </ul>
 
           Para descargar e instalar el Api Rest de click en el siguiente link -
-          <a href="https://github.com/paulgr30/start-laravel" target="_blank">start-laravel</a>
+          <a href="https://github.com/paulgr30/testophyra-laravel" target="_blank">testophyra-laravel</a>
           <p></p>
         </b-card>
       </b-col>
