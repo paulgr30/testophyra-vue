@@ -17,7 +17,7 @@
               variant="primary"
               size="sm"
               @click="setItem()"
-              v-b-modal.modalUser
+              v-b-modal.modalItem
             >
               <b-icon icon="plus-lg" font-scale="0.9" class="mr-md-1" />
               <span class="d-none d-md-inline">Agregar Item</span>
@@ -80,16 +80,13 @@
             <b-link
               class="mr-4 text-center"
               @click="setItem(item)"
-              v-b-modal.modalUser
+              v-b-modal.modalItem
             >
               <b-icon icon="pencil-square" scale="1.5" variant="info" />
             </b-link>
 
             <!-- Boton Eliminar -->
-            <b-link
-              class="text-center"
-              @click="remove(item.id)"
-            >
+            <b-link class="text-center" @click="remove(item.id)">
               <b-icon icon="trash" scale="1.5" variant="danger" />
             </b-link>
           </template>
@@ -124,16 +121,19 @@
       </b-col>
     </b-row>
 
-    <user />
+    <item />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import item from "./Item.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
+  components: {
+    item,
+  },
   data() {
     return {
       showOverlay: false,
@@ -142,9 +142,15 @@ export default {
     };
   },
   computed: {
-    items() { return this.$store.getters["mItems/items"]; },
-    total() { return this.$store.getters["mItems/totalRecords"]; },
-    pages() { return this.$store.getters["mItems/numberPages"]; },
+    items() {
+      return this.$store.getters["mItems/items"];
+    },
+    total() {
+      return this.$store.getters["mItems/totalRecords"];
+    },
+    pages() {
+      return this.$store.getters["mItems/numberPages"];
+    },
     page: {
       get() {
         return this.$store.getters["mItems/currentPage"];
@@ -228,5 +234,5 @@ export default {
     this.$store.dispatch("mItems/setSearchValue", "");
     this.loadItems();
   },
-}
+};
 </script>

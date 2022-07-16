@@ -36,9 +36,9 @@ export default {
   },
   async addOrUpdate({ dispatch }, data) {
     try {
-      data.id
-        ? await Vue.axios.put("items/" + data.id, data)
-        : await Vue.axios.post("items", data);
+      data.get("id")
+        ? await Vue.axios.post("items/" + data.get("id"), data)
+        : await Vue.axios.post("items", data);      
 
       await dispatch("getByCriteria");
     } catch (err) {
