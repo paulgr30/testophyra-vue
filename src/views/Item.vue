@@ -170,11 +170,7 @@ export default {
       this.hasImage = false;
       this.item = JSON.parse(JSON.stringify(this.$store.getters["mItems/currentItem"]));
 
-      //if(this.item.id) {
-        this.loadImage();
-      /*} else {
-        this.image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWknGAoHFzmh-h5njt4tAWMqtBQbcKfirS2rvX8cYGaDEE_ZMkKD9aBh2uQn8EWyFBWkM&usqp=CAU";
-      }*/
+      this.loadImage();
     },
 
     imagePreview(e) {

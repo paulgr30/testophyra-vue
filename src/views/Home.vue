@@ -74,6 +74,11 @@
             <h5 class="text-center py-5">No hay datos para mostrar</h5>
           </template>
 
+          <!-- Mostrar Imagen -->
+          <template #cell(image)="{ item }">
+            <img id="picture" ref="picture" :src="showImage(item.image)" width="70" />
+          </template>
+
           <!-- Botonera Tabla -->
           <template #cell(opciones)="{ item }">
             <!-- Boton Editar -->
@@ -165,16 +170,20 @@ export default {
           key: "image",
           label: "Imagen",
           //sortable: true,
-          thStyle: "width:200px;",
+          thStyle: "width:100px;",
         },
         {
           key: "title",
           label: "Titulo",
-          thStyle: "width:300px;",
+          thClass: "text-left",
+          tdClass: "text-left",
+          thStyle: "width:200px;",
         },
         {
           key: "description",
           label: "Descripcion",
+          thClass: "text-left",
+          tdClass: "text-left",
           thStyle: "width:500px;",
         },
         {
@@ -212,6 +221,16 @@ export default {
     },
     linkGen(pageNum) {
       return pageNum === 1 ? "?" : `?page=${pageNum}`;
+    },
+    showImage(image) {
+      if (image) {
+        image = process.env.VUE_APP_IMAGE_URL + image;
+      } else {
+        image =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWknGAoHFzmh-h5njt4tAWMqtBQbcKfirS2rvX8cYGaDEE_ZMkKD9aBh2uQn8EWyFBWkM&usqp=CAU";
+        this.hasImage = false;
+      }
+      return image;
     },
     async remove(id) {
       this.showOverlay = true;
