@@ -1,12 +1,12 @@
 <template>
-  <div class="px-5">
+  <div class="px-md-5">
     <b-card no-body class="pt-3 pb-2 px-4">
       <b-row>
         <b-col cols="6">
           <!-- Titulo -->
           <h5 class="text-left">
             <b-icon icon="list-check" font-scale="1.2" class="mr-md-1" />
-            Usuarios
+            Items
           </h5>
         </b-col>
 
@@ -135,7 +135,7 @@
 import item from "./Item.vue";
 
 export default {
-  name: "Home",
+  name: "TheItems",
   components: {
     item,
   },

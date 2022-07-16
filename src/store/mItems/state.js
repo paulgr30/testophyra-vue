@@ -4,7 +4,7 @@ export default {
   totalRecords: 0,
   search: {
     page: 1,
-    perPage: 33,
+    perPage: 5,
     searchValue: "",
   },
   isLoading: true,

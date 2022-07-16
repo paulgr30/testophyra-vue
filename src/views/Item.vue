@@ -160,6 +160,7 @@ export default {
         this.$refs.modalItem.hide();
       }
       this.item = {};
+      this.image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWknGAoHFzmh-h5njt4tAWMqtBQbcKfirS2rvX8cYGaDEE_ZMkKD9aBh2uQn8EWyFBWkM&usqp=CAU";
       this.$refs.vdtObserver.reset();
       this.submitted = false;
     },
